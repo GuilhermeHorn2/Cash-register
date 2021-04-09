@@ -1,0 +1,20 @@
+r = []
+m = int(input(':'))
+
+while True:
+    print('Press 0 to finish')
+    n = int(input('Price:'))
+    if n == 0:
+        break
+    r.append(n)
+
+for i in range(len(r)):
+    print('Product',i+1,'','$',format(r[i],'.2f'))
+
+t = sum(r)
+tr = m - t
+print('Total:',"$",format(t,'.2f'))
+if tr < 0:
+    print('There are','$',tr*(-1),' lefting to pay')
+else:
+    print('Change:', '$', format(m - t, '.2f'))
